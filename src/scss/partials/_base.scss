@@ -1,0 +1,153 @@
+html {
+  font-size: 16px;
+}
+
+html,
+body {
+  font-family: $font-family !important;
+  color: $font-color;
+  background: $bg-color;
+  height: 100%;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+body {
+  font-size: rem($font-size);
+  position: relative;
+}
+
+web-app {
+  height: 100%;
+  display: block;
+}
+
+web-layout {
+  background-color: $bg-color !important;
+  min-height: calc(100% - 50px);
+  .layout-content {
+    padding: 20px !important;
+    min-height: calc(100vh - 85px);
+
+    @media only screen and (max-width: 990px) {
+      padding: 80px 10px 0 !important;
+
+      .float-element > button {
+        display: block;
+      }
+    }
+
+    .app-page-title {
+      padding: 30px 30px 20px;
+      margin: -30px -30px 0px;
+      position: relative;
+
+      .page-title-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        &.centered {
+          justify-content: center;
+        }
+      }
+
+      .page-title-heading,
+      .page-title-subheading {
+        margin: 0;
+        padding: 0;
+        font-family: $main-font;
+        line-height: 20px;
+      }
+
+      .page-title-heading {
+        font-size: 1.25rem;
+        font-weight: 400;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        color: $fg-color;
+      }
+
+      .page-title-subheading {
+        padding: 3px 0 0;
+        font-size: 12px !important;
+        opacity: .6;
+        color: $fg-color;
+      }
+    }
+  }
+}
+
+web-footer {
+  text-align: center;
+  font-size: 13px;
+  width: 100%;
+  box-sizing: border-box;
+
+  .footer {
+    height: 44px;
+    display: table;
+    width: 100%;
+
+    .footer-container {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}
+
+.notification {
+  padding: 10px 20px;
+  border-radius: 2px;
+  position: relative;
+
+  &.alert-warning {
+      background-color: orange;
+  }
+
+  &.alert-danger {
+      background-color: red;
+  }
+
+  &.alert-success {
+      background-color: green;
+  }
+
+  &.alert-info {
+      background-color: blue;
+  }
+
+  .notification-inner {
+      button {
+          background: none;
+          color: #fff;
+          border: none;
+          position: absolute;
+          right: 2px;
+          top: 3px;
+          padding: 0px;
+          margin: 0px;
+          cursor: pointer;
+
+          mat-icon {
+              font-size: 18px;
+          }
+      }
+
+      h4 {
+          margin: 0px;
+          color: #fff;
+      }
+
+      p {
+          margin: 5px 0px;
+          color: #fff;
+          font-size: 16px;
+          padding: 0px 10px;
+      }
+  }
+}
+
+.mat-list-base .mat-list-item.mat-list-item-with-avatar, .mat-list-base .mat-list-option.mat-list-item-with-avatar {
+  height: fit-content !important;
+}

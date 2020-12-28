@@ -1,0 +1,31 @@
+
+<ng-container *ngIf="responses?.length > 0">
+    <div class="results-action-buttons">
+        <button mat-raised-button class="secundary" (click)="accordion.openAll()">Expand All</button>
+        <button mat-raised-button class="secundary" (click)="accordion.closeAll()">Collapse All</button>
+    </div>
+    <mat-accordion class="results-headers-align" multi>
+        <mat-expansion-panel *ngFor="let response of responses" [disabled]="!(response.status == 1)">
+            <mat-expansion-panel-header>
+                <mat-panel-title class="title">
+                    {{response.requestedUrl}}
+                    <mat-icon class="icon-status" *ngIf="response.status == 1" style="color: green">done_all</mat-icon>
+                </mat-panel-title>
+                <mat-panel-description>
+                    <span *ngIf="response.status == 1">{{response.results.length}} links found</span>
+                    <mat-spinner *ngIf="response.status == 0" [diameter]="30" [strokeWidth]="3"></mat-spinner>
+                </mat-panel-description>
+                <mat-icon class="icon-status" *ngIf="response.status == -1" style="color: red">error</mat-icon>
+            </mat-expansion-panel-header>
+
+            <mat-list *ngIf="response.results?.length > 0">
+                <mat-list-item *ngFor="let result of response.results">
+                <mat-icon mat-list-icon>link</mat-icon>
+                <div mat-line class="link-url">{{result}}</div>
+                </mat-list-item>
+            </mat-list>
+            <span *ngIf="response.results?.length == 0" style="padding-top: 10px; display: block;">No results found</span>
+            <span *ngIf="response.results?.length == 1">{{response.processingTime}} ms</span>
+        </mat-expansion-panel>
+    </mat-accordion>
+</ng-container>
