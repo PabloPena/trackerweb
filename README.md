@@ -7,7 +7,7 @@ The app is developed in Angular 9 using socket.io for living communication with 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.8.
 
-For testing, the project contains a first very simple configuration with karma which will be extended in future realeases.
+For testing, the project contains a first very simple configuration build in karma which will be extended in future realeases.
 
 It already set for deployment as docker image. Check intructions above.
 
