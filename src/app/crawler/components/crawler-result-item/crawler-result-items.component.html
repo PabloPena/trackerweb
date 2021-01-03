@@ -1,0 +1,11 @@
+<ul *ngIf="item.results?.length > 0" class="crawler-results-items-container">
+    <li class="crawler-result-item" *ngFor="let result of item.results">
+        <a href="{{result}}" target="_blank" rel="noopener noreferrer">{{result}}</a>
+    </li>
+</ul>
+<span *ngIf="item.results?.length == 0" class="crawler-no-results">No results found</span>
+<div *ngIf="item.results?.length > 0 && item.processingTime" class="crawler-time">
+    <mat-icon>access_time</mat-icon>
+    <span>Tracked in {{item.processingTime}} miliseconds</span>
+</div>
+<mat-icon (click)="discardItem()" class="discard-btn bottom-right">delete</mat-icon>

@@ -2,7 +2,7 @@ import { environment } from '../../../environments/environment';
 import * as io from 'socket.io-client';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { CrawlerResponseApiNotification } from '../../core/models/crawlerResponseApi.model copy';
+import { CrawlerNotification } from '../../core/models/crawler-notification.model';
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +10,7 @@ import { CrawlerResponseApiNotification } from '../../core/models/crawlerRespons
 export class SocketService {
     broadcastId: string;
     socket: SocketIOClient.Socket;
-    private messageQueue$: BehaviorSubject<CrawlerResponseApiNotification[]> = new BehaviorSubject([]);
+    private messageQueue$: BehaviorSubject<CrawlerNotification[]> = new BehaviorSubject([]);
     constructor() { 
       this.broadcastId = generateBroadcastId();
     }
@@ -34,7 +34,7 @@ export class SocketService {
       return firstElement;
     }
 
-    getMessageQueue():BehaviorSubject<CrawlerResponseApiNotification[]>{
+    getMessageQueue():BehaviorSubject<CrawlerNotification[]>{
       return this.messageQueue$;
     }
 }

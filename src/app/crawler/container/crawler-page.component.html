@@ -1,26 +1,28 @@
 <ng-container>
 
-    <p> This is a simply web utility made in Angular 9 and NodeJS for crawling websites URLs. </p>
-    <p> Feel free to test it.  </p>
+  <p> This is a simply web utility made in Angular 9 and NodeJS for crawling websites URLs. </p>
+  <p> Feel free to test it. </p>
 
-    <mat-card>
+  <mat-card>
 
-        <div class="searchcontainer">
-      
-            <div class="search-part">
-      
-              <mat-form-field appearance="outline"> 
-                  <mat-label>URL</mat-label>
-                  <input matInput placeholder="https://elpais.com/" [(ngModel)]="searchURL">
-              </mat-form-field>
-      
-              <button mat-raised-button color="primary" type="submit" (click)="processURL()">Search Links</button>
-            </div>
-      
-          </div>
+    <div class="searchcontainer">
 
-    </mat-card>
+      <div class="search-part">
 
-    <crawler-results [responses]="responses$ | async"></crawler-results>
+        <mat-form-field appearance="outline">
+          <mat-label>URL</mat-label>
+          <input #inputUrl urlValidator matInput placeholder="https://elpais.com/" [(ngModel)]="searchURL">
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit" (click)="processURL()" [disabled]="!inputIsValid()">
+          Search Links
+        </button>
+      </div>
+
+    </div>
+
+  </mat-card>
+
+  <crawler-results [responses]="responses$ | async"></crawler-results>
 
 </ng-container>

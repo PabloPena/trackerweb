@@ -30,7 +30,8 @@ export class SnackBarComponent {
 
   openNotification() {
     this._snackBar.open(this._notification.title || this._notification.description, this.getActionMessage(), {
-        duration: this._notification.hideAfterMiliseconds
+        duration: this._notification.hideAfterMiliseconds,
+        panelClass: this.getPanelClass(), 
     });
     
   }
@@ -55,5 +56,23 @@ export class SnackBarComponent {
         break;
     }
     return actionMessage;
+  }
+
+  private getPanelClass() {
+    let panelClass = '';
+    switch (this._notification.type) {
+      case NotificationType.WARNING:
+        panelClass = 'warningNotification';
+        break;
+
+      case NotificationType.ERROR:
+        panelClass = 'errorNotification';
+        break;
+
+      case NotificationType.SUCCESS:
+        panelClass = 'successNotification';
+        break;
+    }
+    return panelClass;
   }
 }

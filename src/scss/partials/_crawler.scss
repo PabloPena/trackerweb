@@ -37,6 +37,11 @@ crawler-page{
             font-size: 12px !important;
         }
 
+        .discard-btn{
+            color: #878787;
+            cursor: pointer;
+        }
+
         .title {
             font-weight: 600;
         }
@@ -46,16 +51,21 @@ crawler-page{
             padding-top: 35px;
             display: flex;
             flex-direction: row-reverse;
-          }
+        }
           
         .results-headers-align .mat-expansion-panel-header-title,
         .results-headers-align .mat-expansion-panel-header-description {
             flex-basis: 0;
+            align-items: center;
+        }
+
+        .results-headers-align .mat-expansion-panel-header-title {
+            flex-grow: 3;
         }
         
         .results-headers-align .mat-expansion-panel-header-description {
-            justify-content: space-between;
-            align-items: center;
+            flex-grow: 1;
+            justify-content: flex-end;
         }
         
         .results-headers-align .mat-form-field + .mat-form-field {
@@ -63,14 +73,60 @@ crawler-page{
         }
 
         .mat-expansion-panel-header {
-            border-radius: none;
-            border-bottom: 1px solid #d4d4d4;    
-            margin-left: 20px;
+            height: 50px !important;
+            overflow: hidden;
+            &.mat-expanded{
+                border-radius: 0;
+                border-bottom: 1px solid #d4d4d4;    
+            }
         }
 
         .icon-status{
             margin-left: 20px;
             font-size: 25px;
+        }
+
+        ul.crawler-results-items-container {
+            display: flex;
+            flex-flow: row wrap;
+            align-content: center;
+            justify-content: left;
+            list-style: none;
+            padding-inline-start: 20px;
+            font-size: 0.8em;
+    
+            .crawler-result-item {
+                padding: 0 10px 0 0;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                width: 850px;
+            }
+        }
+
+        .crawler-time{
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            mat-icon {
+                padding-right: 10px;
+            }
+            span {
+                text-align: center;
+                font-weight: 700;
+            }
+        }
+    
+        span.crawler-no-results {
+            display: block;
+            padding: 10px 0 0 20px;
+        }
+
+        .bottom-right {
+            position: absolute;
+            float: right;
+            right: 16px;
+            bottom: 12px;
         }
     }
 }

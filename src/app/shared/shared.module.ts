@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
-import { CommonModule, registerLocaleData } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { PipesModule } from './pipes';
+import { DirectivesModule } from './directives';
 import { AppPageTitleComponent } from './components/app-page-title/app-page-title.component';
+import { SimpleDialogComponent } from './components/simple-dialog/simple-dialog.component';
 
 export const COMPONENTS = [
-  AppPageTitleComponent
+  AppPageTitleComponent, SimpleDialogComponent
 ]
 
 @NgModule({
@@ -17,10 +19,11 @@ export const COMPONENTS = [
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
-    PipesModule
+    PipesModule,
+    DirectivesModule
   ],
   declarations: [ COMPONENTS ],
-  entryComponents: [],
+  entryComponents: [ SimpleDialogComponent ],
   exports: [
     CommonModule,
     MaterialModule,
@@ -28,6 +31,7 @@ export const COMPONENTS = [
     ReactiveFormsModule,
     RouterModule,
     PipesModule,
+    DirectivesModule,
     COMPONENTS
   ],
 })

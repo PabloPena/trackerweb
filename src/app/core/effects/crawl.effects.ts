@@ -7,7 +7,7 @@ import {
   switchMap,
 } from 'rxjs/operators';
 import { CrawlerActions, NotificationActions } from '../actions';
-import { CrawlerResponseApi } from '../models/crawlerResponseApi.model';
+import { CrawlerResponse } from '../models/crawler-response.model';
 import { CrawlService } from '../services/crawl.service';
 import { NotificationType, Notification } from '../models/notification.model';
 
@@ -29,7 +29,7 @@ export class CrawlEffects {
         map(action => action.payload),
         switchMap(payload => {
             return this.crawlService.crawlUrl(payload).pipe(
-                map((crawlerResponse: CrawlerResponseApi) => 
+                map((crawlerResponse: CrawlerResponse) => 
                     new CrawlerActions.CrawlURLStart(crawlerResponse)
                 ),
                 catchError(_ => { 

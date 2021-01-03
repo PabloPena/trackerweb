@@ -4,8 +4,7 @@ import { Store } from '@ngrx/store';
 import { SocketService } from 'src/app/shared/services/socket.service';
 import { environment } from '../../../environments/environment';
 import { CrawlerActions, NotificationActions } from '../actions';
-import { CrawlerResponseApi } from '../models/crawlerResponseApi.model';
-import { CrawlerResponseApiNotification } from '../models/crawlerResponseApi.model copy';
+import { CrawlerNotification } from '../models/crawler-notification.model';
 import * as fromRoot from '../../reducers';
 import { NotificationType, Notification } from '../models/notification.model';
 
@@ -17,7 +16,7 @@ export class CrawlService {
   constructor(
     private http: HttpClient, private socketService: SocketService, private store: Store<fromRoot.State>,) {
         // Subscription to queue of update messages retrieved from API. For each change, shift and process;
-        this.socketService.getMessageQueue().subscribe((queue: CrawlerResponseApiNotification[]) => {
+        this.socketService.getMessageQueue().subscribe((queue: CrawlerNotification[]) => {
             if (queue && queue.length > 0) {
                 const elementToUpdate = socketService.shiftMessage();
                 this.store.dispatch(new CrawlerActions.CrawlURLUpdate(elementToUpdate.data));

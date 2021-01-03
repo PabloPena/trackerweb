@@ -1,3 +1,4 @@
+/* page */
 html {
   font-size: 16px;
 }
@@ -22,6 +23,7 @@ web-app {
   display: block;
 }
 
+/* layout */
 web-layout {
   background-color: $bg-color !important;
   min-height: calc(100% - 50px);
@@ -78,6 +80,7 @@ web-layout {
   }
 }
 
+/* footer */
 web-footer {
   text-align: center;
   font-size: 13px;
@@ -96,58 +99,62 @@ web-footer {
   }
 }
 
-.notification {
-  padding: 10px 20px;
-  border-radius: 2px;
-  position: relative;
-
-  &.alert-warning {
-      background-color: orange;
+/* notifications */
+snack-bar-container {
+  &.warningNotification {
+    .mat-simple-snackbar-action{
+      color: orange;
+    }
   }
 
-  &.alert-danger {
-      background-color: red;
+  &.errorNotification {
+    .mat-simple-snackbar-action{
+      color: #ff4848;
+    }
   }
 
-  &.alert-success {
-      background-color: green;
+  &.successNotification {
+    .mat-simple-snackbar-action{
+      color: #15a615;
+    }
   }
-
-  &.alert-info {
-      background-color: blue;
-  }
-
-  .notification-inner {
-      button {
-          background: none;
-          color: #fff;
-          border: none;
-          position: absolute;
-          right: 2px;
-          top: 3px;
-          padding: 0px;
-          margin: 0px;
-          cursor: pointer;
-
-          mat-icon {
-              font-size: 18px;
-          }
-      }
-
-      h4 {
-          margin: 0px;
-          color: #fff;
-      }
-
-      p {
-          margin: 5px 0px;
-          color: #fff;
-          font-size: 16px;
-          padding: 0px 10px;
-      }
+  .mat-simple-snackbar-action {
+    color: #fff;
   }
 }
 
+/* list */
 .mat-list-base .mat-list-item.mat-list-item-with-avatar, .mat-list-base .mat-list-option.mat-list-item-with-avatar {
   height: fit-content !important;
+}
+
+/* collapsable */
+.mat-expansion-indicator::after {
+  margin-top: -6px;
+}
+
+/* dialog */
+html.cdk-global-scrollblock {
+  top: 0 !important;
+}
+.simple-dialog {
+  .mat-dialog-content {
+    overflow: hidden;
+  }
+  .mat-dialog-actions {
+    justify-content: center;
+  }
+  p {
+    font-size: 0.8em;
+  }
+} 
+
+/* buttons */
+button{
+  &[disabled] {
+    opacity: 0.5 !important;
+    &.mat-primary{
+      color: #fff !important;
+    }
+  }
 }

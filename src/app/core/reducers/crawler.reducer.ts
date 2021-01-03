@@ -1,11 +1,11 @@
 import {
   CrawlerActions
 } from '../actions';
-import { CrawlerResponseApi } from '../models/crawlerResponseApi.model';
+import { CrawlerResponse } from '../models/crawler-response.model';
 
 
 export interface State {
-  responses: CrawlerResponseApi[];
+  responses: CrawlerResponse[];
 }
 
 const initialState: State = {
@@ -36,6 +36,14 @@ export function reducer(
       } else {
         return state
       }
+    case CrawlerActions.CrawlerActionTypes.CrawlURLDiscard:
+      const ocurrenceIdx = state.responses.findIndex(response => action.payload.requestID ? response.requestID === action.payload.requestID : response.requestedUrl === action.payload.requestedUrl);
+      clonedResponses = JSON.parse(JSON.stringify(state.responses));
+      if (ocurrenceIdx >= 0) clonedResponses.splice(ocurrenceIdx, 1);
+      return {
+        ...state,
+        responses: clonedResponses,
+      };  
     default:
       return state;
   }
