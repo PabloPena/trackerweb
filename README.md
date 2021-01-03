@@ -7,27 +7,27 @@ The app is developed in Angular 9 using socket.io for living communication with 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.8.
 
-## Install packages and globals
+### Install packages and globals
 
 `$ npm install`
 
-## Development server
+### Development server
 
 Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Build
+### Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. 
 
-## Angular: Further help
+#### Angular: Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md)
 
-## Running unit tests
+### Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Environment support
+### Environment support
 
 Currenty only one configuration is enabled: demo. This configuration replace the default environment file with the environment.[cfg] file, both stored in environments folder.
 For deploying the webapp make sure to configure correctly the config associeated file (api base url, api path, etc.)
@@ -55,9 +55,9 @@ For the previous example, the final command would be:
 
 `$ docker run -d --name trackerweb -p 80:443 tracker/web:0.0.1`
 
+__
   
-  
-## TO DO TASKS
+#### TO DO TASKS
 
 **Running end-to-end tests with Protractor**
 
