@@ -61,7 +61,11 @@ For the previous example, the final command would be:
 
 Pending
 
-## Resolve Lint Errors Advices
+## Review configuration, adjust paramters and resolve Lint Errors Advices
+
+Pending
+
+## Versioning Build
 
 Pending
 
