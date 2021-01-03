@@ -17,7 +17,7 @@ It already set for deployment as docker image. Check intructions above.
 
 ### Development server
 
-Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start` for launching dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ### Build
 
@@ -31,18 +31,18 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-### Environment support
+### Environment configuration
 
-Currenty only one configuration is enabled: demo. This configuration replace the default environment file with the environment.[cfg] file, both stored in environments folder.
-For deploying the webapp make sure to configure correctly the config associeated file (api base url, api path, etc.)
+Currenty only one configuration is enabled: demo. This configuration replace the default environment file with the environment.[cfg] file, both stored in /environments folder.
+For deploying the webapp make sure to configure correctly the config associated file (api base url, api path, etc.)
 
 ### Docker
 
-At the root of the project is the `.dockerfile` describing the Docker image. This image uses an
-_nginx_ server for static content delivery. This server's configuration is located at `./nginx.conf`.
+The description file `.dockerfile` is stored in /docker folder. It describes the Docker image. This image uses an
+_nginx_ server for static content delivery. This server's configuration is located at the same folder named as `./nginx.conf`.
 
 **Build Image:**
-Ensure to construct the Angular App with: ng build --configuration=[cfg]
+Ensure to construct the Angular App with ng build --configuration=[cfg]
 `$ docker build -t [tag_name] .`
 
 For example, a build for a *demo* environment would be:
