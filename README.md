@@ -1,11 +1,15 @@
 Crawler WEB
 ====================
 
-This frontend-oriented applications responds to the requeriments of crawling websites URLs and listing the links retrieved.
+This frontend application responds to the requeriments of crawling websites URLs and listing the links retrieved.
 
-The app is developed in Angular 9 using socket.io for living communication with the api server. Also uses the redux patter through ngrx.
+The app is developed in Angular 9 using socket.io for living communication with the api server. Also uses the redux patter through ngrx libs.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.8.
+
+For testing, the project contains a first configuration with karma which will be extended in future realeases.
+
+It already set for deployment as docker image. Check intructions above.
 
 ### Install packages and globals
 
