@@ -55,17 +55,19 @@ For the previous example, the final command would be:
 
 `$ docker run -d --name trackerweb -p 80:443 tracker/web:0.0.1`
 
+  
+  
 ## TO DO TASKS
 
-## Running end-to-end tests with Protractor
+**Running end-to-end tests with Protractor**
 
 Pending
 
-## Review configuration, adjust paramters and resolve Lint Errors Advices
+**Review configuration, adjust paramters and resolve Lint Errors Advices**
 
 Pending
 
-## Versioning Build
+**Add versioning build**
 
 Pending
 
