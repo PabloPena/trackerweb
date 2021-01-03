@@ -8,20 +8,20 @@ import { NG_VALIDATORS, Validator, AbstractControl } from '@angular/forms';
 export class UrlValidatorDirective implements Validator {
     constructor() { }
 
-    validate(control: AbstractControl): { [key: string]: any } | null { 
+    validate(control: AbstractControl): { [key: string]: any } | null {
         if (!control.value) return null;
 
         let url;
 
         try {
             url = new URL(control.value);
-        } catch (_){
+        } catch (_) {
             return { 'invalidUrl': { value: control.value } }
         }
 
         if (url.protocol !== "http:" && url.protocol !== "https:") {
             return { 'invalidProtocol': { value: control.value } }
-        } 
+        }
 
         return null;
     }

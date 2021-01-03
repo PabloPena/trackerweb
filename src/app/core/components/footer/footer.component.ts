@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { environment } from "../../../../environments/environment";
+import { environment } from '../../../../environments/environment';
 
 @Component({
-  selector: 'web-footer',
+  selector: 'app-footer',
   templateUrl: 'footer.component.html'
 })
 export class FooterComponent {

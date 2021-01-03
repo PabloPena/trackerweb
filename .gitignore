@@ -41,9 +41,6 @@ testem.log
 /.scannerwork
 /*.iml
 
-# e2e
-e2e/*
-
 # System Files
 .DS_Store
 Thumbs.db

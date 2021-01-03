@@ -3,6 +3,7 @@
   <mat-dialog-content [innerHtml]="data?.htmlContent"></mat-dialog-content>
   <mat-dialog-actions align="end">
     <button mat-button mat-dialog-close>{{data?.cancelLabel ? data.cancelLabel : 'Cancel'}}</button>
-    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>{{data?.actionLabel ? data.actionLabel : 'Confirm'}}</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>{{data?.actionLabel ? data.actionLabel :
+      'Confirm'}}</button>
   </mat-dialog-actions>
 </div>

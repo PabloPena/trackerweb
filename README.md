@@ -19,34 +19,49 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. 
 
-## Further help
+## Angular: Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md)
 
+## Running unit tests
 
-
-## TO DO TASKS
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ## Environment support
 
-Pending
+Currenty only one configuration is enabled: demo. This configuration replace the default environment file with the environment.[cfg] file, both stored in environments folder.
+For deploying the webapp make sure to configure correctly the config associeated file (api base url, api path, etc.)
 
-## Running unit tests with Karma
+### Docker
 
-Pending
+At the root of the project is the `.dockerfile` describing the Docker image. This image uses an
+_nginx_ server for static content delivery. This server's configuration is located at `./nginx.conf`.
+
+**Build Image:**
+Ensure to construct the Angular App with: ng build --configuration=[cfg]
+`$ docker build -t [tag_name] .`
+
+For example, a build for a *demo* environment would be:
+ng build --configuration=[demo]
+`$ docker build -t tracker/web:0.0.1 -f docker/dockerfile .`
+
+**Creating and running the container:**
+
+To run this image, a container must be created.
+
+`$ docker run -d --name [container_name] -p [host_port]:[container_port] [tag_name]`
+
+For the previous example, the final command would be:
+
+`$ docker run -d --name trackerweb -p 80:443 tracker/web:0.0.1`
+
+## TO DO TASKS
 
 ## Running end-to-end tests with Protractor
 
-Pending..
+Pending
 
-## Docker
+## Resolve Lint Errors Advices
 
 Pending
 
-**Build Image Instructions:**
-
-Pending
-
-**Creating and running the container instructions:**
-
-Pending

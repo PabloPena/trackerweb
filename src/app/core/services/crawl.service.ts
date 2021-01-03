@@ -24,9 +24,9 @@ export class CrawlService {
                 // Throw notification related
                 let notification;
                 if (elementToUpdate.data?.status == 1) {
-                  notification = new Notification(null, 'New URL Processed!!', NotificationType.SUCCESS, 2000);
+                  notification = new Notification(null, 'New URL Processed !!', NotificationType.SUCCESS, 2000);
                 } else {
-                  notification = new Notification(null, 'Unexpected error processing URL', NotificationType.ERROR, 2000);
+                  notification = new Notification(null, ':( Unexpected error processing URL', NotificationType.ERROR, 2000);
                 }
                 this.store.dispatch(new NotificationActions.OpenNotification(notification))
             }

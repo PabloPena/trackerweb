@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
-import { SharedModule } from '../shared';
+import { NgModule } from '@angular/core';
+import { SharedModule } from '../shared';
 import { CrawlerRoutingModule } from './crawler-routing.module';
 import { CrawlerPageComponent } from './container/crawler-page.component';
 import { CrawlerResultsAccordionComponent } from './components/crawler-results-accordion/crawler-results-accordion.component';
-import { CrawlerResultItems } from './components/crawler-result-item/crawler-result-items.component'
+import { CrawlerResultItems } from './components/crawler-result-items/crawler-result-items.component'
 
 export const COMPONENTS = [
   CrawlerResultsAccordionComponent,
@@ -12,11 +12,11 @@ export const COMPONENTS = [
 ];
 
 @NgModule({
-  imports: [  
+  imports: [
     SharedModule,
     CrawlerRoutingModule,
   ],
-  entryComponents:[],
+  entryComponents: [],
   declarations: COMPONENTS
 })
 export class CrawlerModule { }

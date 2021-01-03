@@ -18,21 +18,21 @@ export class CrawlerPageComponent {
   searchURL: string;
   responses$: Observable<CrawlerResponse[]>;
 
-  constructor(private store: Store<fromRoot.State>){
-    
+  constructor(private store: Store<fromRoot.State>) {
+
   }
 
-  ngOnInit(){
+  ngOnInit() {
     this.responses$ = this.store.pipe(select(fromRoot.getCurrentResponses))
   }
 
-  processURL(){
+  processURL() {
     if (!this.searchURL || this.inputUrl.errorState) return;
-    this.store.dispatch(new CrawlerActions.CrawlURLRequest(this.searchURL)); 
+    this.store.dispatch(new CrawlerActions.CrawlURLRequest(this.searchURL));
     this.searchURL = null;
   }
 
-  inputIsValid(){
+  inputIsValid() {
     return (this.searchURL && !this.inputUrl.errorState);
   }
 

@@ -6,13 +6,13 @@ import { Component, Input } from '@angular/core';
 })
 export class AppPageTitleComponent {
 
-    @Input()
-    icon: string;
+  @Input()
+  icon: string;
 
-    @Input()
-    header: string;
+  @Input()
+  header: string;
 
-    @Input() 
-    description: string;
+  @Input()
+  description: string;
 
 }

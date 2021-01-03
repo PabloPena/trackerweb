@@ -5,7 +5,7 @@ import {
 import { Notification, NotificationType } from '../../models/notification.model';
 
 @Component({
-  selector: 'snack-bar',
+  selector: 'app-snack-bar',
   templateUrl: 'snackbar.component.html'
 })
 export class SnackBarComponent {

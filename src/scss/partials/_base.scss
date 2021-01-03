@@ -24,7 +24,7 @@ web-app {
 }
 
 /* layout */
-web-layout {
+app-layout {
   background-color: $bg-color !important;
   min-height: calc(100% - 50px);
   .layout-content {
@@ -81,7 +81,7 @@ web-layout {
 }
 
 /* footer */
-web-footer {
+app-footer {
   text-align: center;
   font-size: 13px;
   width: 100%;

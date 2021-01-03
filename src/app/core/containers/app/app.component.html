@@ -1,9 +1,9 @@
-<web-layout>
+<app-layout>
   <div class="layout-content">
     <router-outlet></router-outlet>
   </div>
-</web-layout>
+</app-layout>
 
-<snack-bar [notification]="notification$ | async"></snack-bar>
+<app-snack-bar [notification]="notification$ | async"></app-snack-bar>
 
-<web-footer></web-footer>
+<app-footer></app-footer>

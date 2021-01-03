@@ -22,8 +22,8 @@ export const COMPONENTS = [
     PipesModule,
     DirectivesModule
   ],
-  declarations: [ COMPONENTS ],
-  entryComponents: [ SimpleDialogComponent ],
+  declarations: [COMPONENTS],
+  entryComponents: [SimpleDialogComponent],
   exports: [
     CommonModule,
     MaterialModule,

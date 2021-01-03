@@ -16,7 +16,7 @@ export class CrawlerResultsAccordionComponent {
 
   @Input() responses: CrawlerResponse[];
 
-  constructor(private store: Store<fromRoot.State>){
+  constructor(private store: Store<fromRoot.State>) {
   }
 
   discardUrl(item: CrawlerResponse) {

@@ -1,4 +1,4 @@
-import { ActionReducerMap, createFeatureSelector, createSelector,} from '@ngrx/store';;
+import { ActionReducerMap, createFeatureSelector, createSelector, } from '@ngrx/store';;
 import * as fromRouter from '@ngrx/router-store';
 import * as fromNotifications from '../core/reducers/notification.reducer';
 import * as fromCrawler from '../core/reducers/crawler.reducer';

@@ -13,7 +13,7 @@ export class CrawlerResultItems {
   @Input() item: CrawlerResponse;
   @Output() discard = new EventEmitter<CrawlerResponse>();;
 
-  constructor(public dialog: MatDialog){
+  constructor(public dialog: MatDialog) {
   }
 
   discardItem() {
