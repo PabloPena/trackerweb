@@ -4,11 +4,13 @@ All notable changes in the application will be documented in this file version b
 
 ## [0.0.3] - 2021-01-04
 
+### Added
 The app has been deployed in Firebase. Demo is now enabled.
 
+### Fixed
+- Mobile styles issues fixed
+
 ## [0.0.2] - 2021-01-03
- 
-In this new version of the application some features have been polished / completed. Outlined below.
  
 ### Added
 - The app allows you to eliminate urls already processed (tracked or with errors).
