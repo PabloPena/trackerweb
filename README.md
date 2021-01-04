@@ -33,12 +33,12 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ### Environment configuration
 
-Currenty only one configuration is enabled: demo. This configuration replace the default environment file with the environment.[cfg] file, both stored in /environments folder.
+Currenty only one configuration is enabled: demo. This configuration replace the default environment file with the environment.[cfg] file, both stored in `environments/` folder.
 For deploying the webapp make sure to configure correctly the config associated file (api base url, api path, etc.)
 
 ### Docker
 
-The description file `.dockerfile` is stored in /docker folder. It describes the Docker image. This image uses an
+The description file `.dockerfile` is stored in `docker/` folder. It describes the Docker image. This image uses an
 _nginx_ server for static content delivery. This server's configuration is located at the same folder named as `./nginx.conf`.
 
 **Build Image:**
