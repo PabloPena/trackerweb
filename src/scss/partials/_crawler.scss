@@ -1,4 +1,18 @@
 crawler-page{
+
+    .sm-text {
+        display: none;
+    }
+  
+    @include for-phones() {
+        .sm-text {
+            display: block;
+        }
+        .lg-text {
+            display: none;
+        }
+    }
+
     .searchcontainer {
         text-align: center;
         width: 100%;
@@ -61,11 +75,21 @@ crawler-page{
 
         .results-headers-align .mat-expansion-panel-header-title {
             flex-grow: 3;
+
+            @include for-phones {
+                max-width: 250px;
+                overflow-wrap: anywhere;
+                font-size: 12px;
+            }
         }
         
         .results-headers-align .mat-expansion-panel-header-description {
             flex-grow: 1;
             justify-content: flex-end;
+
+            @include for-phones {
+                margin: 0;
+            }
         }
         
         .results-headers-align .mat-form-field + .mat-form-field {

@@ -157,4 +157,10 @@ button{
       color: #fff !important;
     }
   }
+
+  @include for-phones() {
+    &.mat-raised-button {
+      min-width: inherit !important;
+    }
+  }
 }
