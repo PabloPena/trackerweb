@@ -47,7 +47,7 @@
                 ],
                 "buildOptimizer": true,
                 "optimization": false,
-                "aot": false,
+                "aot": true,
                 "sourceMap": true
             }
           }

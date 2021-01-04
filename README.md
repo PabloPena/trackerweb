@@ -11,6 +11,10 @@ For testing, the project contains a first very simple configuration build in kar
 
 Its already set for deployment as docker image. Check intructions above.
 
+### Demo
+
+Demo application deployed on Firebase. Check out here: (https://crawlerwebapp-okppg.web.app/#/)
+
 ### Install packages and globals
 
 `$ npm install`
@@ -35,6 +39,8 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Currenty only one configuration is enabled: demo. This configuration replace the default environment file with the environment.[cfg] file, both stored in `environments/` folder.
 For deploying the webapp make sure you have configured correctly the config associated file (api base url, api path, etc.)
+
+ng build --configuration=[cfg]
 
 ### Docker
 
@@ -68,7 +74,7 @@ __
 
 Pending
 
-**Review Lint configuration, adjust parameters and finalyy resolve Lint results advices**
+**Review Lint configuration, adjust parameters and finally resolve Lint results advices**
 
 Pending
 
