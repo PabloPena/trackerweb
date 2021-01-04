@@ -3,13 +3,13 @@ Crawler WEB
 
 This frontend application responds to the requeriments of crawling websites URLs and listing the links retrieved.
 
-The app is developed in Angular 9 using socket.io for living communication with the api server. Also uses the redux patter through ngrx libs.
+The app is developed in Angular 9 using socket.io for living communication with the api server. Also uses the redux pattern through ngrx libs.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.8.
 
-For testing, the project contains a first very simple configuration build in karma which will be extended in future realeases.
+For testing, the project contains a first very simple configuration build in karma which will be extended in future releases.
 
-It already set for deployment as docker image. Check intructions above.
+Its already set for deployment as docker image. Check intructions above.
 
 ### Install packages and globals
 
@@ -34,14 +34,15 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ### Environment configuration
 
 Currenty only one configuration is enabled: demo. This configuration replace the default environment file with the environment.[cfg] file, both stored in `environments/` folder.
-For deploying the webapp make sure to configure correctly the config associated file (api base url, api path, etc.)
+For deploying the webapp make sure you have configured correctly the config associated file (api base url, api path, etc.)
 
 ### Docker
 
 The description file `.dockerfile` is stored in `docker/` folder. It describes the Docker image. This image uses an
-_nginx_ server for static content delivery. This server's configuration is located at the same folder named as `./nginx.conf`.
+_nginx_ server for static content delivery. This server's configuration is described in `./nginx.conf` file located at the same folder.
 
 **Build Image:**
+
 Ensure to construct the Angular App with ng build --configuration=[cfg]
 `$ docker build -t [tag_name] .`
 
@@ -67,11 +68,11 @@ __
 
 Pending
 
-**Review configuration, adjust paramters and resolve Lint Errors Advices**
+**Review Lint configuration, adjust parameters and finalyy resolve Lint results advices**
 
 Pending
 
-**Add versioning build**
+**Add versioning build to streamline the process**
 
 Pending
 
