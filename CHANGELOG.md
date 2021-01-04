@@ -10,7 +10,7 @@ In this new version of the application some features have been polished / comple
 - The app allows you to eliminate urls already processed (tracked or with errors).
 - Environment support. Demo configuration is added to run the a image in docker container. Set the corresponding API address before first release in this environment.
 - Add component unit tests. At the moment, only checks the base case of creation.
-- Dockerized App
+- App has been dockerized 
  
 ### Changed
 - Small interface improvements.
